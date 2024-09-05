@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-
+import { addIcons } from 'ionicons';
+import { logoIonic } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+
+    addIcons({ logoIonic });
+
+
+  }
 }
 
