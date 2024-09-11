@@ -1,13 +1,54 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>crear</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crear Cuenta</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">crear</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <form (ngSubmit)="onCreateAccount()" #createForm="ngForm">
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email" required email></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre" name="nombre" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="apellido" name="apellido" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="fechaNacimiento" name="fechaNacimiento" required></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ciudad</ion-label>
+      <ion-input type="text" [(ngModel)]="ciudad" name="ciudad" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Comuna</ion-label>
+      <ion-input type="text" [(ngModel)]="comuna" name="comuna" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="createForm.submitted && password !== confirmPassword">
+      <p>Las contraseñas no coinciden.</p>
+    </ion-text>
+    <ion-button expand="full" type="submit">Crear Cuenta</ion-button>
+  </form>
+  <ion-text color="success" *ngIf="accountCreated">
+    <p>Cuenta creada exitosamente.</p>
+  </ion-text>
 </ion-content>

@@ -1,0 +1,45 @@
+ion-header {
+    ion-toolbar {
+      ion-title {
+        font-size: 24px;
+      }
+  
+      ion-button {
+        --background: transparent;
+        --color: #007bff;
+      }
+  
+      ion-icon {
+        font-size: 24px;
+      }
+    }
+  }
+  
+  ion-content {
+    form {
+      ion-item {
+        margin-bottom: 20px;
+  
+        ion-label {
+          font-size: 18px;
+        }
+  
+        ion-input,
+        ion-datetime {
+          font-size: 16px;
+        }
+      }
+  
+      ion-button {
+        font-size: 18px;
+        padding: 12px;
+      }
+    }
+  
+    ion-text {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+    
