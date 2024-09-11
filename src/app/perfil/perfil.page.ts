@@ -15,5 +15,11 @@ export class PerfilPage {
     // Navegar a la página de inicio de sesión
     this.navCtrl.navigateRoot('/home');
   }
+
+  goBack() {
+    // Navegar a la página anterior
+    this.navCtrl.back();
+  }
 }
+
 
