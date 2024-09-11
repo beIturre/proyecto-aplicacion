@@ -1,40 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
 
+<ion-content class="ion-padding">
+  <h2>Bienvenido a la Aplicación</h2>
+  <p>Estamos encantados de tenerte aquí. ¡Explora y disfruta de todas las funcionalidades!</p>
+</ion-content>
 
-<ion-menu contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">This is the menu content.</ion-content>
-  <ion-button>configuraciones</ion-button>
-  <ion-button> <ion-icon name="logo-ionic"> </ion-icon> User</ion-button>
-</ion-menu>
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start"><ion-badge>24</ion-badge>
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Pagina Principal</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
-
-
-
-
-
-
-  <ion-footer class="ion-no-border">
-    <ion-toolbar>
-      <ion-button> Home </ion-button>
-      <ion-button> prod </ion-button>
-      <ion-button> fav</ion-button>
-      <ion-button> carrito </ion-button>
-    </ion-toolbar>
-  </ion-footer>
-
-
-
-</div>
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Inicio</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="settings">
+      <ion-icon name="settings"></ion-icon>
+      <ion-label>Ajustes</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="profile">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>
